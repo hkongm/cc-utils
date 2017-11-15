@@ -3,6 +3,7 @@
  * @param {String} name 参数名
  * @param {String} [optianl] url 
  */
+
 const getQueryString = (name, url = window.location.href) => {
   name = name.replace(/[\[\]]/g, "\\$&");
   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
