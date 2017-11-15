@@ -7,4 +7,4 @@ const isEmail = str => {
   return /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/.test(str);
 }
 
-export isEmail
+export default isEmail;
