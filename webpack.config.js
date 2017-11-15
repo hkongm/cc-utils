@@ -1,10 +1,14 @@
+const webpack = require('webpack');
 const path = require('path');
+const pkg = require('./package.json');
 
-module.exports = {
+const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    library: 'ccutil',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
@@ -19,5 +23,10 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin()
+  ]
 };
+
+module.exports = config
