@@ -4,4 +4,4 @@ const isEmptyObject = obj => {
   return !Object.keys(obj).length
 }
 
-export isEmptyObject
+export default isEmptyObject;
